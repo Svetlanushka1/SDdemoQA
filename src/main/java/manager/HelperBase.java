@@ -1,8 +1,7 @@
 package manager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 
 public class HelperBase {
     WebDriver wd;
@@ -32,5 +31,12 @@ public class HelperBase {
             e.printStackTrace();
         }
     }
+   /* public void openElementByCssSelectorCoordinates(By locator) {
+        Rectangle rect = wd.findElement(By.cssSelector(".checkbox-container")).getRect();
+        int x = rect.getX() + 5;//left top corner
+        int y = rect.getY() + 1/4 *rect.getHeight();
+        Actions actions = new Actions(wd);
+        actions.moveByOffset(x,y).click().perform();//to navigate the cursor+click+do
+    }*/
 }
 

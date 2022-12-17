@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
 
     WebDriver wd;
-    HelperStudentForm studentForm;
+    HelperStudent studentForm;
 
     public void init() {
         ChromeOptions options = new ChromeOptions();
@@ -21,8 +21,8 @@ public class ApplicationManager {
 
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        wd.navigate().to("https://demoqa.com");
-        studentForm = new HelperStudentForm(wd);
+        wd.navigate().to("https://demoqa.com/");
+        studentForm = new HelperStudent(wd);
         // Thread.sleep();
         returnToDemoQa();
 
@@ -40,7 +40,7 @@ public class ApplicationManager {
 
     }
 
-    public HelperStudentForm studentForm() {
+    public HelperStudent studentForm() {
         return studentForm;
     }
 }
